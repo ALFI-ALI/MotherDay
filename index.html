@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mother's Day</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom CSS styles here */
+        body {
+            background-image: url('/mother-s-day-pink-background-vector.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Other background styles (e.g., position, color) */
+        }
+        /* Style the button */
+        #click {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        /* Center the button */
+        #click {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* Style the displayed message */
+        #display {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+    <div id="display"></div>
+    <button id="click" onclick="displayMessage()">To My Queen</button>
+    <script>
+        let messages = [
+            "Thank you for always being my rock!",
+            "Your love and support mean everything to me.",
+            "I am endlessly grateful for everything you've done.",
+            "You're not just my mother, you're my hero.",
+            "I love you more than words can express."
+        ];
+        function displayMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('display').textContent = messages[randomIndex];
+        }
+    </script>
+    <!-- Add Bootstrap JS scripts (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
